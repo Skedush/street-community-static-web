@@ -1,0 +1,178 @@
+@import '../../../../global.less';
+.actionBar {
+  margin-bottom: 24px;
+
+  :global {
+    .ant-cascader-picker {
+      background-color: #2c3944;
+      color: #fff;
+    }
+  }
+}
+
+.renderBox {
+  :global {
+    .ant-card-body {
+      padding: 15px;
+      zoom: 1;
+    }
+    .ant-btn-disabled,
+    .ant-btn.disabled,
+    .ant-btn[disabled],
+    .ant-btn-disabled:hover,
+    .ant-btn.disabled:hover,
+    .ant-btn[disabled]:hover,
+    .ant-btn-disabled:focus,
+    .ant-btn.disabled:focus,
+    .ant-btn[disabled]:focus,
+    .ant-btn-disabled:active,
+    .ant-btn.disabled:active,
+    .ant-btn[disabled]:active,
+    .ant-btn-disabled.active,
+    .ant-btn.disabled.active,
+    .ant-btn[disabled].active {
+      color: #fff;
+      // background-color: #f5f5f5;
+      background-color: #455561;
+      opacity: 0.5;
+      border-color: #e5e5e5;
+      text-shadow: none;
+      box-shadow: none;
+    }
+  }
+}
+.select {
+  background: #2c3944;
+  border-color: @borderThemeColor;
+}
+.tableImage {
+  width: 100px;
+  height: 60px;
+}
+
+.flexbtn {
+  // float: right;
+  // width: 60%;
+  flex: 1;
+  .btnBox {
+    display: flex;
+  }
+  :global(.ant-form-item-children) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  :global(.ant-form-item-control-wrapper) {
+    width: 100%;
+  }
+}
+.modal {
+  display: flex;
+  :global {
+    .ant-modal-title {
+      color: @inputFontColor;
+    }
+    .ant-modal {
+      height: 750px !important;
+      width: 1080px !important;
+      position: relative;
+    }
+    .ant-modal-close {
+      color: #ccc;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-content {
+      position: static;
+      background: @bgThemeColor;
+      .noBorderRadius;
+      border: 1px solid @borderThemeColor;
+    }
+    .ant-modal-header {
+      background: @bgThemeColor;
+      .noBorderRadius;
+      border-bottom: 1px solid @borderThemeColor;
+    }
+    .ant-modal-body {
+      background: @bgThemeColor;
+      .noBorderRadius;
+      padding: 0;
+      // position: relative;
+    }
+  }
+}
+// 车辆画像
+.carModal {
+  display: flex;
+  overflow: hidden;
+  // position: relative;
+  :global {
+    .ant-modal-title {
+      color: #fff;
+      font-size: 16px;
+      line-height: 46px;
+    }
+    .ant-spin-nested-loading > div > .ant-spin {
+      max-height: 100%;
+      background: rgba(19, 34, 45, 0.95);
+    }
+    .ant-modal {
+      height: 825px !important;
+      width: 1250px !important;
+      position: relative;
+      padding-bottom: 0;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+    .ant-modal-close {
+      color: #fff;
+      right: 25px;
+      top: 17px;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-content {
+      position: static;
+      background: @bgThemeColor;
+      height: 100%;
+      .noBorderRadius;
+      border: 1px solid @borderThemeColor;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-modal-header {
+      background: rgba(19, 34, 45, 0.95);
+      .noBorderRadius;
+      padding: 0 25px 0 30px;
+      border-bottom: 1px solid @borderThemeColor;
+      height: 46px;
+      // height: 6%;
+    }
+    .ant-modal-body {
+      background: rgba(19, 34, 45, 0.95);
+      .noBorderRadius;
+      padding: 0;
+      flex: 1;
+      // position: relative;
+      height: 94%;
+    }
+    .ant-modal-close-x {
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+    }
+  }
+}
+:global {
+  .ant-message {
+    z-index: 30000;
+  }
+}

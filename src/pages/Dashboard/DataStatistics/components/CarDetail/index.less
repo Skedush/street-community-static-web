@@ -1,0 +1,227 @@
+@import '../../../../../global.less';
+.toolTip {
+  z-index: 9999;
+}
+.container {
+  width: 54%;
+  height: 85%;
+  position: absolute;
+  border-radius: 4px;
+  bottom: 30px;
+  background: rgba(11, 25, 52, 0.9);
+  overflow: hidden;
+  z-index: 6;
+  left: 17%;
+  .top {
+    color: #fff;
+    border-bottom: 1px solid #666;
+    .title {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+    .close {
+      cursor: pointer;
+      padding: 10px 20px;
+      &:hover {
+        color: #22c2fe;
+        background: rgba(52, 66, 90, 0.8);
+      }
+    }
+  }
+  :global {
+    .ant-spin-nested-loading {
+      flex: 1;
+      overflow: hidden;
+    }
+    .ant-spin-container {
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+    }
+  }
+  .content {
+    .porLeft {
+      overflow: hidden;
+      height: 100%;
+      width: 29%;
+      box-sizing: border-box;
+      padding: 20px 20px;
+      .leftTop {
+        .photo {
+          height: 120px;
+          width: 100px;
+          margin-right: 10px;
+        }
+        .licensePlate {
+          font-size: 24px;
+          color: #fff;
+        }
+        .registerType {
+          color: #fff;
+          font-size: 14px;
+          .hoverTitle {
+            background: #4ecefe;
+            margin-left: 4px;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            border-radius: 50%;
+            display: inline-block;
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .title {
+        padding-bottom: 5px;
+        border-bottom: 1px solid #125d7a;
+        color: #fff;
+        .icon {
+          font-size: 18px;
+          color: aquamarine;
+          margin-right: 5px;
+        }
+        .text {
+          margin-left: 5px;
+          font-size: 16px;
+        }
+      }
+
+      .carInfo,
+      .ownInfo {
+        width: 100%;
+        margin-top: 24px;
+        font-size: 14px;
+        box-sizing: border-box;
+        // padding-top: 24px;
+        color: #fff;
+        overflow: auto;
+        .item {
+          padding: 5px 0;
+          width: 50%;
+        }
+      }
+      .ownInfo {
+        flex: 1;
+        .carousel {
+          position: relative;
+
+          .left,
+          .right {
+            z-index: 10;
+            cursor: pointer;
+            position: absolute;
+            color: #1d9dce;
+            top: 50%;
+            font-size: 20px;
+          }
+          .right {
+            right: 0;
+          }
+          .text {
+            padding: 5px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            &:hover {
+              background: rgba(30, 152, 199, 0.1);
+            }
+            color: #fff;
+            font-size: 14px;
+            margin: 15px 20px 0 20px;
+            div {
+              padding: 5px 0;
+            }
+          }
+        }
+      }
+    }
+    .porRight {
+      overflow: hidden;
+      color: #fff;
+      flex: 1;
+      height: 100%;
+      padding: 20px;
+      .rightFirst {
+        h3 {
+          color: #fff;
+          font-size: 14px;
+          line-height: 14px;
+          margin-bottom: 8px;
+          display: inline-block;
+        }
+        :global(.ant-select-selection--multiple .ant-select-selection__choice) {
+          border: 1px solid #4e36ff;
+          background-color: #4e36ff;
+          border-radius: 10px;
+          color: #fff;
+        }
+      }
+      .rightBottom {
+        padding-top: 20px;
+        .rightTopTitle {
+          width: 100%;
+          box-sizing: border-box;
+          h3 {
+            font-size: 14px;
+            color: #fff;
+          }
+        }
+        .rightTopTextBox {
+          // height: 308px;
+          padding: 0 20px 0 20px;
+          overflow-y: auto;
+          .textDiv {
+            width: 100%;
+            // height: 123px;
+            display: flex;
+            padding-top: 25px;
+            border-bottom: 2px solid rgba(233, 233, 233, 0.1);
+            p {
+              margin-bottom: 8px;
+              font-size: 12px;
+              color: #fff;
+              line-height: 12px;
+            }
+            .divIndex {
+              height: 70px;
+              width: 30px;
+              line-height: 70px;
+              margin-left: 10px;
+              color: #fff;
+            }
+          }
+          .nothing {
+            padding-top: 20px;
+            font-size: 14px;
+          }
+        }
+        .rightTopTextBox::-webkit-scrollbar-thumb {
+          border-radius: 3px;
+          background: rgba(209, 209, 209, 0.2);
+        }
+        :global {
+          .ant-spin-nested-loading,
+          .ant-spin-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+          }
+          .ant-spin-nested-loading > div > .ant-spin {
+            background: rgba(19, 34, 45, 0.4);
+          }
+        }
+      }
+      .rightChart {
+        height: 50%;
+        width: 100%;
+        h3 {
+          font-size: 14px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

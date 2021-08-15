@@ -1,0 +1,295 @@
+.masterButton {
+  background-color: #22c2fe;
+  border: 0;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 0;
+
+  min-height: 32px;
+  min-width: 88px;
+  span {
+    font-size: 13px;
+    line-height: 32px;
+  }
+}
+
+.masterButton:hover,
+.masterButton:active,
+.masterButton:focus {
+  background-color: #38c8fe;
+  color: #fff;
+}
+
+.ghostButton {
+  background-color: transparent;
+  border: 1px solid #2391e6;
+  color: #2391e6;
+  border-radius: 0;
+}
+
+.ghostButton:hover,
+.ghostButton:active,
+.ghostButton:focus {
+  background-color: transparent;
+  border: 1px solid #23b0e6;
+  color: #2391e6;
+}
+
+.warningButton {
+  background-color: #f15362;
+  border: 1px solid #f15362;
+  color: #ffdee0;
+  border-radius: 0;
+}
+
+.warningButton:hover,
+.warningButton:active,
+.warningButton:focus {
+  background-color: #ff6574;
+  border: 1px solid #f55867;
+  color: #ffdee0;
+}
+
+.linkButton {
+  background-color: unset;
+  border: 0;
+  color: #22c2fe;
+  border-radius: 0;
+}
+
+.linkButton:hover,
+.linkButton:active,
+.linkButton:focus {
+  background-color: unset;
+  border: 0;
+  color: #22c2fe;
+}
+.secondButton {
+  background-color: #455561;
+  border: 1px solid #556876;
+  color: #fff;
+  border-radius: 0;
+}
+
+.secondButton:hover,
+.secondButton:active,
+.secondButton:focus {
+  background-color: #455561;
+  border: 1px solid #4aa4eb;
+  color: #2da5d5;
+}
+
+.selectButton,
+.selectButton:active,
+.selectButton:focus {
+  background-color: #22c2fe;
+  color: #fff;
+  border: 0;
+  font-size: 13px;
+  border-radius: 0;
+}
+.selectButton:hover {
+  background-color: #38c8fe;
+  color: #fff;
+}
+
+.resetButton,
+.resetButton:active,
+.resetButton:focus {
+  background-color: #455561;
+  color: #fff;
+  border: 0;
+  // height: 32px;
+
+  min-height: 32px;
+  min-width: 88px;
+  font-size: 13px;
+  border-radius: 0;
+}
+.resetButton:hover {
+  background-color: #596670;
+  color: #fff;
+}
+
+.secondButton,
+.ghostButton,
+.warningButton,
+.selectButton {
+  min-height: 32px;
+  min-width: 118px;
+  border-radius: 0 !important;
+}
+
+.selectAddButton {
+  height: 32px;
+  background-color: #455561;
+  color: #fff;
+  border-color: #586b7a;
+  border-radius: 0;
+}
+.selectAddButton:hover,
+.selectAddButton:active {
+  background-color: #6c838f;
+  color: #fff;
+  border-color: #586b7a;
+}
+
+.iconButton {
+  background-color: transparent;
+  border: 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.iconButton:hover,
+.iconButton:active {
+  background-color: transparent;
+  color: #22c2fe;
+  border-color: transparent;
+}
+
+.alarm {
+  width: 100%;
+  height: 32px;
+  background-color: #455561;
+  border-radius: 0;
+  border: 1px solid #455561;
+}
+.alarm:hover,
+.alarm:active,
+.alarm:focus {
+  border: 1px solid #4aa4eb;
+  background-color: #455561;
+}
+.centerIconButton,
+.deleteIconButton {
+  background-color: transparent;
+  border: 0;
+  font-size: 18px;
+  color: #fff;
+  margin-left: 20px;
+}
+
+.centerIconButton:hover,
+.centerIconButton:active {
+  background-color: transparent;
+  color: #22c2fe;
+  border-color: transparent;
+}
+.deleteIconButton:hover,
+.deleteIconButton:active {
+  background-color: transparent;
+  color: red;
+  border-color: transparent;
+}
+
+.firstPageButton {
+  width: 32px;
+  height: 80px;
+  position: absolute;
+  left: -33px;
+  top: 50%;
+  margin-top: -100px;
+  border: 1px solid rgba(34, 194, 254, 1);
+  background: rgba(34, 194, 254, 1);
+
+  border-radius: 0 8px 8px 0;
+
+  :global {
+    // .ant-btn > .anticon + span,
+    // .ant-btn > span + .anticon {
+    //   margin-left: -10px;
+    // }
+    .anticon-caret-left {
+      color: rgba(255, 255, 255, 1);
+      font-size: 20px;
+      // margin-left: -5px;
+      position: absolute;
+      right: 24%;
+      top: 39%;
+    }
+    .anticon-caret-right {
+      color: rgba(255, 255, 255, 1);
+      font-size: 20px;
+      // margin-left: -2px;
+      position: absolute;
+      right: 16%;
+      top: 39%;
+    }
+  }
+}
+
+.firstPageButton:hover,
+.firstPageButton:active,
+.firstPageButton:focus {
+  width: 32px;
+  height: 80px;
+  position: absolute;
+  left: -33px;
+  top: 50%;
+  margin-top: -100px;
+  border: 1px solid rgba(34, 194, 254, 1);
+  background: rgba(34, 194, 254, 1);
+
+  border-radius: 0 8px 8px 0;
+  :global(.anticon-caret-right) {
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    // margin-left: -2px;
+    position: absolute;
+    right: 16%;
+    top: 39%;
+  }
+  :global(.anticon-caret-left) {
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
+    // margin-left: -5px;
+    position: absolute;
+    right: 24%;
+    top: 39%;
+  }
+}
+.floatOperate {
+  background-color: #22c2fe;
+  border: 0;
+  color: #fff;
+  height: 100%;
+
+  margin-left: 10px;
+  border-radius: 0;
+  width: 100px;
+  //  flex: 0.1;
+  //  text-align: right;
+  // margin-right: auto;
+  // display: inline-block;
+  float: right;
+}
+.floatOperate:hover,
+.floatOperate:active,
+.floatOperate:focus {
+  background-color: #4fcfff;
+  color: #fff;
+  height: 100%;
+}
+.floatDeal {
+  background: rgba(53, 66, 75, 1);
+  border: 0;
+  color: #fff;
+  margin-left: 10px;
+  border-radius: 0;
+  width: 100px;
+  height: 100%;
+  //  flex: 0.1;
+  //  text-align: right;
+  // margin-right: auto;
+  // display: inline-block;
+  float: right;
+}
+.floatDeal:hover,
+.floatDeal:active,
+.floatDeal:focus {
+  background: rgba(53, 66, 75, 1);
+  height: 100%;
+
+  color: #fff;
+}

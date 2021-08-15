@@ -1,0 +1,50 @@
+.container {
+  width: 500px;
+  position: absolute;
+  right: 20px;
+  padding: 20px;
+  height: 85%;
+  bottom: 30px;
+  border-radius: 4px;
+  z-index: 5;
+  overflow: hidden;
+  background: rgba(11, 25, 52, 0.8);
+  .title {
+    background: url('@/assets/statistics/header.png') no-repeat center;
+    padding-left: 20px;
+    background-size: cover;
+    height: 30px;
+    color: #fff;
+  }
+  .basic {
+    padding-top: 20px;
+    height: 40%;
+    color: #ccc;
+    .basicItem {
+      width: 32%;
+      .icon {
+        font-size: 20px;
+        color: aquamarine;
+        margin-right: 5px;
+      }
+      .content {
+        margin-left: 50px;
+        .childrenItem {
+          padding: 4px 0;
+          font-size: 14px;
+          :global {
+            .ant-badge-status-text {
+              color: #ccc;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ages {
+    height: 27%;
+  }
+  .native {
+    height: 27%;
+  }
+}

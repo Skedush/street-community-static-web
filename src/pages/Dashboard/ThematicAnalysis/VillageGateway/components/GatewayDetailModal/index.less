@@ -1,0 +1,132 @@
+@import '~themes/vars.less';
+@import '../../../../../../global.less';
+.modal {
+  z-index: 9999;
+  :global {
+    .ant-modal-title {
+      color: @inputFontColor;
+    }
+    .ant-modal-wrap {
+      z-index: 9999;
+    }
+    .ant-modal {
+      max-height: 80%;
+      overflow: auto;
+      top: 20%;
+    }
+    .ant-modal-close {
+      color: #ccc;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-content {
+      background: @bgThemeColor;
+      height: 100%;
+      .noBorderRadius;
+      border: 1px solid @borderThemeColor;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-modal-header {
+      background: @bgThemeHeightColor;
+      .noBorderRadius;
+      border-bottom: 1px solid @borderThemeColor;
+    }
+    .ant-modal-body {
+      height: 100%;
+      flex: 1;
+      background: @bgThemeColor;
+      .noBorderRadius;
+    }
+  }
+}
+
+.spinstyle {
+  height: 100%;
+  overflow: hidden;
+  :global(.ant-spin-container) {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+.echarts {
+  margin-top: 30px;
+  .title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: unset;
+  }
+}
+.tableTitle {
+  margin: 30px 0 30px 0;
+  font-size: 14px;
+  font-weight: unset;
+  color: #fff;
+}
+.colTable {
+  color: @inputFontColor;
+
+  .col {
+    flex: auto;
+    border: 2px solid @borderThemeColor;
+    border-right: 1px solid @borderThemeColor;
+    cursor: pointer;
+    &:hover {
+      background-color: #37515f;
+    }
+    .label {
+      padding: 8px 16px;
+      text-align: center;
+      width: 100%;
+      border-bottom: 2px solid @borderThemeColor;
+    }
+    .content {
+      text-align: center;
+      padding: 8px 16px;
+      width: 100%;
+      :global {
+        .ant-badge {
+          .ant-badge-status-text {
+            color: @inputFontColor;
+          }
+        }
+      }
+    }
+  }
+  .activeCol {
+    background-color: #37515f;
+    border: 2px solid #33667e;
+    .label {
+      border-bottom: 2px solid #33667e;
+    }
+  }
+}
+.desc {
+  :global {
+    .ant-descriptions-title {
+      color: @inputFontColor;
+      font-size: 14px;
+      font-weight: unset;
+    }
+    .ant-descriptions-view {
+      border-radius: 0;
+      border: 1px solid @borderThemeColor;
+      .ant-descriptions-row {
+        border-bottom: 1px solid @borderThemeColor;
+        .ant-descriptions-item-label.ant-descriptions-item-colon {
+          background: @bgThemeHeightColor;
+          border-right: 1px solid @borderThemeColor;
+          color: #b0b0b0;
+          text-align: center;
+        }
+        .ant-descriptions-item-content {
+          text-align: center;
+          border-right: 1px solid @borderThemeColor;
+          color: @inputFontColor;
+        }
+      }
+    }
+  }
+}

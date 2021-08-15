@@ -1,0 +1,328 @@
+@import '../../../../../global.less';
+.container {
+  // position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 1003px;
+  height: 551px;
+  background: rgba(19, 34, 45, 0.9);
+  color: white;
+  font-size: 14px;
+  // z-index: 1000;
+  // margin-left: 1700px;
+  :global(.ant-tabs) {
+    //  width: 1003px;
+    background: rgba(19, 34, 45, 0.9);
+  }
+
+  .houseDetail {
+    cursor: pointer;
+  }
+
+  .close {
+    cursor: pointer;
+  }
+  .font12 {
+    font-size: 12px;
+  }
+  .insideTd {
+    border-right: 1px solid @bordermodalcolor;
+  }
+  .insideTd:nth-child(4) {
+    border-right: none;
+  }
+  .borderTop {
+    border-top: 1px solid @bordermodalcolor;
+  }
+  .secendColor {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+  .dividerBgColor {
+    background: rgba(255, 255, 255, 0.5) !important;
+  }
+  .importantHouseBg {
+    background: #ea5114;
+  }
+  .font18 {
+    font-size: 18px;
+  }
+  .ownLiveBg {
+    background-color: #009dff;
+  }
+  .rentOutBg {
+    background-color: #15aba2;
+  }
+  .sevenPersonBg {
+    background-color: #f2ba33;
+  }
+  .circular {
+    border-radius: 50%;
+    background-size: 100% 100%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fontWeight {
+    font-weight: bold;
+  }
+  .infoRight {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    width: 70%;
+    .itemr {
+      display: flex;
+      width: 50%;
+      flex-direction: row;
+      align-items: center;
+      padding: 15px 30px;
+      height: 95px;
+      .image {
+        width: 52px;
+        height: 54px;
+        background: url('@/assets/images/common/icon-circle-bg.png') no-repeat center;
+        background-size: 100% 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // background-color: red;
+      }
+
+      .content {
+        flex: auto;
+        margin-left: 16px;
+        flex-direction: column;
+        justify-content: center;
+
+        span {
+          font-size: 28px;
+          color: #fff;
+        }
+
+        .contentBottom {
+          display: flex;
+          flex-direction: row;
+
+          span {
+            font-size: 12px;
+          }
+
+          span:nth-of-type(2) {
+            margin-left: 37px;
+          }
+        }
+      }
+    }
+    .itemr:nth-last-of-type(1),
+    .itemr:nth-last-of-type(2) {
+      border: none;
+    }
+  }
+  .width33 {
+    width: 33.333%;
+  }
+  .width45 {
+    width: 45%;
+    flex-wrap: wrap;
+  }
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 16px;
+    color: #dadada;
+    width: 258px;
+    height: 26px;
+    box-sizing: border-box;
+    background: url('../../../../../assets/images/divbg.png') no-repeat center;
+    background-size: 100% 100%;
+
+    .icon {
+      min-width: 40px;
+      height: 100%;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      box-sizing: border-box;
+    }
+
+    .title {
+      width: 100%;
+      text-align: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-left: 15px;
+      font-size: 14px;
+      line-height: 14px;
+
+      span {
+        font-size: 14px;
+        -webkit-transform: scale(0.75);
+        -webkit-transform-origin-x: 0;
+      }
+    }
+  }
+  .photo {
+    width: 212px;
+    height: 212px;
+    margin-bottom: 30px;
+  }
+
+  :global {
+    .ant-tabs-bar {
+      border-color: @bordermodalcolor;
+    }
+    .ant-table-body {
+      overflow: hidden;
+    }
+    .ant-tabs {
+      color: @inputFontColor;
+    }
+    .ant-tabs-nav-scroll {
+      padding-left: @sm;
+    }
+    .ant-tabs-content {
+      height: 90%;
+    }
+    .ant-badge-status-text {
+      font-size: 8px;
+      color: @inputFontColor;
+    }
+    .ant-empty-normal {
+      min-height: 200px;
+    }
+    .ant-spin-nested-loading {
+      height: 100%;
+    }
+    .ant-spin-container {
+      height: 100%;
+    }
+  }
+}
+.modal {
+  :global {
+    .ant-modal-title {
+      color: @inputFontColor;
+    }
+    .ant-modal {
+      width: 1072px !important;
+      color: #fff;
+    }
+    .ant-modal-close {
+      color: #ccc;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-content {
+      background: rgba(19, 34, 45, 0);
+      .noBorderRadius;
+      border: 1px solid @borderThemeColor;
+    }
+    .ant-modal-header {
+      background: rgba(19, 34, 45, 0.95);
+      .noBorderRadius;
+      border-bottom: 1px solid @borderThemeColor;
+    }
+    .ant-modal-body {
+      background: rgba(19, 34, 45, 0.95);
+      .noBorderRadius;
+      padding: 0;
+    }
+  }
+}
+:global {
+  .ant-tabs-bar {
+    margin: 0;
+  }
+  .ant-tabs-tabpane-active {
+    padding: 0;
+  }
+
+  .ant-tabs .ant-tabs-top-content > .ant-tabs-tabpane,
+  .ant-tabs .ant-tabs-bottom-content > .ant-tabs-tabpane {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+  }
+}
+.centerBox {
+  padding-bottom: 0;
+}
+
+.leftBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.houseModal {
+  :global(.ant-modal-content) {
+    background: rgba(19, 34, 45, 1);
+  }
+  :global {
+    .ant-modal-title {
+      color: #fff;
+      font-size: 16px;
+      line-height: 46px;
+    }
+    .ant-modal {
+      // height: 825px !important;
+      // width: 1250px !important;
+      width: 1072px !important;
+      height: 672px !important;
+      position: relative;
+      padding-bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .ant-modal-close {
+      color: #fff;
+      right: 25px;
+      top: 17px;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-content {
+      position: static;
+      background: rgba(19, 34, 45, 1);
+      height: 100%;
+      .noBorderRadius;
+      border: 1px solid @borderThemeColor;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-modal-header {
+      background: rgba(19, 34, 45, 1);
+      .noBorderRadius;
+      padding: 0 25px 0 30px;
+      border-bottom: 1px solid @borderThemeColor;
+      height: 46px;
+    }
+    .ant-modal-body {
+      background: rgba(19, 34, 45, 1);
+      .noBorderRadius;
+      padding: 0;
+      flex: 1;
+      // position: relative;
+      height: 100%;
+    }
+    .ant-modal-close-x {
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+    }
+  }
+}

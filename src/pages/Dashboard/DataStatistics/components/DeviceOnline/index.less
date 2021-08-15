@@ -1,0 +1,105 @@
+@import '../../../../../global.less';
+
+.title {
+  background: url('@/assets/statistics/header.png') no-repeat center;
+  padding-left: 20px;
+  background-size: cover;
+  height: 30px;
+  color: #fff;
+}
+.content {
+  padding: 15px 5px;
+  .device {
+    cursor: pointer;
+    width: 49%;
+    height: 23%;
+    background: rgba(31, 158, 204, 0.2);
+    border: 1px solid #2099c5;
+    margin: 5px 0;
+    color: #fff;
+    .name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 60%;
+      text-align: center;
+      font-size: 16px;
+    }
+    .status {
+      width: 40%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      :global {
+        .ant-badge-status-text {
+          color: #fff;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.modalPortrait {
+  display: flex;
+  overflow: hidden;
+  z-index: 9999;
+  :global {
+    .ant-modal-title {
+      color: #fff;
+      font-size: 16px;
+      line-height: 46px;
+    }
+    .ant-modal {
+      height: 90% !important;
+      position: relative;
+      padding-bottom: 0;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+    .ant-modal-close {
+      color: #fff;
+      right: 25px;
+      top: 17px;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-content {
+      position: static;
+      background: @bgThemeColor;
+      height: 100%;
+      .noBorderRadius;
+      border: 1px solid @borderThemeColor;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-modal-header {
+      background: rgba(19, 34, 45, 0.95);
+      .noBorderRadius;
+      padding: 0 25px 0 30px;
+      border-bottom: 1px solid @borderThemeColor;
+      height: 46px;
+    }
+    .ant-modal-body {
+      background: rgba(19, 34, 45, 0.95);
+      .noBorderRadius;
+      padding: 0;
+      flex: 1;
+      // position: relative;
+      height: 91%;
+    }
+    .ant-modal-close-x {
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+    }
+  }
+}

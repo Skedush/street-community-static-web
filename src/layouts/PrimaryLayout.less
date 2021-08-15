@@ -1,0 +1,25 @@
+@import '~themes/vars.less';
+
+.content {
+  min-height: ~'calc(100% - 72px)';
+  height: 100%;
+  // overflow-y: scroll;
+}
+
+.container {
+  flex: 1;
+  // overflow-y: scroll;
+  // overflow-x: hidden;
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .content {
+    padding: 12px;
+  }
+
+  .container {
+    height: 100vh;
+    flex: 1;
+    width: 100%;
+  }
+}

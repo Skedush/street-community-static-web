@@ -1,0 +1,77 @@
+.container {
+  width: 500px;
+  position: absolute;
+  right: 20px;
+  padding: 20px;
+  height: 85%;
+  bottom: 30px;
+  border-radius: 4px;
+  z-index: 5;
+  overflow: hidden;
+  background: rgba(11, 25, 52, 0.8);
+  .title {
+    background: url('@/assets/statistics/header.png') no-repeat center;
+    padding-left: 20px;
+    background-size: cover;
+    height: 30px;
+    color: #fff;
+  }
+  .basic {
+    padding: 20px 40px;
+    height: 25%;
+    color: #ccc;
+    .basicItem {
+      width: 50%;
+      .icon {
+        font-size: 20px;
+        color: aquamarine;
+        margin-right: 5px;
+      }
+      .content {
+        margin-left: 20px;
+        .childrenItem {
+          padding: 4px 0;
+          font-size: 14px;
+          :global {
+            .ant-badge-status-text {
+              color: #ccc;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ages {
+    height: 28%;
+  }
+  .native {
+    height: 28%;
+  }
+  .unitInfo {
+    height: 42%;
+    overflow: auto;
+    color: #eee;
+    .floor {
+      border: 1px solid #1f99c7;
+      width: 10%;
+      background: rgba(29, 157, 206, 0.2);
+      margin-bottom: 10px;
+    }
+    .houses {
+      width: 86%;
+      .house {
+        cursor: pointer;
+        width: 48%;
+        border: 1px solid #1f99c7;
+        padding: 10px;
+        margin-bottom: 10px;
+        background: rgba(29, 157, 206, 0.2);
+        :global {
+          .ant-badge-status-text {
+            color: #eee;
+          }
+        }
+      }
+    }
+  }
+}

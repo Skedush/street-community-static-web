@@ -1,0 +1,94 @@
+#image: zacksleo/node
+
+variables:
+  COMPOSER_CACHE_DIR: "/cache/composer"
+  DOCKER_DRIVER: overlay2
+  DOCKER_REGISTRY: 192.168.70.225
+  DOCKER_IMAGE_NAME: ${CI_PROJECT_NAMESPACE}
+  DOCKER_IMAGE_VERSION: ${CI_COMMIT_REF_NAME}
+  TRIGGER_REPO_URL: http://192.168.70.235:8088/api/v4/projects/302/trigger/pipeline
+  TRIGGER_REPO_BRANCH: ${CI_COMMIT_REF_NAME}
+  APP_NAME: ${CI_PROJECT_NAME}
+
+before_script:
+  # Install ssh-agent through openssh-client if not present
+  - 'which ssh-agent || ( apt-get update -qy && apt-get install openssh-client -qqy )'
+  # Add the private key to this user
+  - eval $(ssh-agent -s) && ssh-add <(echo "$SSH_PRIVATE_KEY") && mkdir -p ~/.ssh
+  - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+
+stages:
+  - prepare
+  - test
+  - deploy
+
+#install_deps:
+#  stage: prepare
+#  cache:
+#    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
+#    paths:
+#      - node_modules/
+#  script:
+#    - npm install --registry=https://registry.npm.taobao.org
+
+# 测试环境构建
+test-build:
+  stage: prepare
+  script:
+    - if [  -d "../node_modules" ]; then
+    - mv ../node_modules .
+    - fi
+    - yarn install
+    - yarn build:test
+    - mv ./node_modules ..
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 5 mins
+  tags:
+    - 18runner
+  only:
+    - test
+
+test-deploy:
+  stage: deploy
+  script:
+    - ssh root@192.168.70.53 'cd /home/app/street-dist/web; sh bin/rm-static.sh'
+    - scp -r dist/* root@192.168.70.53:/home/app/street-dist/web/dist/
+  tags:
+    - 18runner
+  only:
+    - test
+#eslint:
+#  stage: test
+#  cache:
+#    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
+#    paths:
+#      - node_modules/
+#    policy: pull
+#  script:
+#    - mkdir -p reports/eslint
+#    #- npm run lint > reports/eslint/main.html
+#    - sudo sshpass -p admin ssh -q -o ConnectTimeout=5 -o StrictHostKeyChecking=no -p 40022 root@192.168.70.235 "rm -rf /usr/share/nginx/html/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/${CI_COMMIT_REF_NAME};mkdir -p /usr/share/nginx/html/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/${CI_COMMIT_REF_NAME}"
+#    - sudo sshpass -p admin scp -r -q -o ConnectTimeout=5 -o StrictHostKeyChecking=no -P 40022 reports/* root@192.168.70.235:/usr/share/nginx/html/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_NAME}/${CI_COMMIT_REF_NAME}
+#    - rm -rf reports
+#  except:
+#    - master
+
+#demo:
+#  stage: deploy
+#  cache:
+#    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
+#    paths:
+#      - node_modules/
+#    policy: pull
+#  script:
+#    - yarn build:ci
+#    - sudo ssh root@192.168.70.201 'rm -rf /home/zhxq/html/*'
+#    - sudo scp -r dist/* root@192.168.70.201:/home/zhxq/html
+#    #- sudo cp -r dist ci/app/
+#    #- cd ci
+#    #- sudo sh build.sh
+#    #- sudo rm -rf app/dist
+#  except:
+#    - master

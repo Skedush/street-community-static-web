@@ -1,0 +1,78 @@
+@import '../../../../../../global.less';
+.exportModal {
+  .onlineForm {
+    max-height: 600px;
+    overflow: auto;
+    :global {
+      .ant-input {
+        background: #394855;
+      }
+      .ant-select-selection {
+        background: #394855;
+      }
+    }
+  }
+  .selectBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    :global {
+      .anticon-minus {
+        margin: 0 5px;
+      }
+    }
+  }
+  .addAddress {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: '10px';
+    background: #394855;
+    color: #fff;
+    border-color: #445366;
+  }
+  .addressText {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .addAddress:hover {
+    color: #22c2fe;
+  }
+  :global {
+    .ant-modal-title {
+      color: #fff;
+      font-size: 16px;
+      line-height: 46px;
+    }
+
+    .ant-modal-close {
+      color: #fff;
+      right: 25px;
+      top: 17px;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-close-x {
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+    }
+
+    .ant-modal-header {
+      background: @bgModalColor;
+      .noBorderRadius;
+      padding: 0 25px 0 30px;
+      border-bottom: 1px solid @borderThemeColor;
+      height: 46px;
+      // height: 6%;
+    }
+    .ant-modal-body {
+      padding: 24px 24px 0 24px;
+    }
+  }
+  // .antd-mo
+}

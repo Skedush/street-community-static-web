@@ -1,0 +1,40 @@
+version: '3'
+services:
+  db:
+    image: 192.168.70.225/smart-community/smart-community-env-mysql:env-rebuild-20200219-V1.1.5
+    ports:
+      - "${DB_PORT:-3306}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: dev
+      MYSQL_DATABASE: dev
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+  redis:
+    image: redis:5.0.7-alpine
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+
+  vr:
+    image: 192.168.70.225/smart-community/smart-community-env-vr:env-rebuild-20200219-V1.1.5
+    ports:
+      - "${VR_PORT:-35001}:80"
+
+  map:
+    image: 192.168.70.225/smart-community/smart-community-env-map:env-rebuild-20200219-V1.1.5
+    ports:
+      - "${MAP_PORT1:-25001}:25001"
+      - "${MAP_PORT2:-25002}:25002"
+      - "${MAP_PORT3:-25003}:25003"
+
+  web:
+    image: 192.168.70.225/smart-community/smart-community-admin-web:env-rebuild-20200219-V1.1.5
+    ports:
+      - "${API_PORT:-8080}:8080"
+      - "${PKI_PORT:-8443}:8443"
+    environment:
+      ADMIN_WEB_IMAGE_PATH: /data/images/
+      ADMIN_WEB_HELP_FILE_PATH: /data/helpfile/
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/dev?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+      SPRING_REDIS_HOST: redis

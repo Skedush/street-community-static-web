@@ -1,0 +1,101 @@
+.container {
+  width: 14%;
+  position: absolute;
+  left: 20px;
+  height: 85%;
+  bottom: 30px;
+  border-radius: 4px;
+  z-index: 5;
+  overflow: hidden;
+  background: rgba(11, 25, 52, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  :global(.ant-tree) {
+    color: #fff;
+    flex: 1;
+    overflow: auto;
+  }
+
+  :global(.ant-tree li span.ant-tree-switcher) {
+    line-height: 45px;
+  }
+
+  :global(.ant-tree li .ant-tree-node-content-wrapper) {
+    color: #fff;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  :global(.ant-tree-title) {
+    font-size: 14px;
+  }
+
+  :global(.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected) {
+    background: #22c2fe;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  .header {
+    height: 60px;
+    background: rgba(11, 25, 52, 0.8);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background: #22c2fe;
+    }
+
+    span {
+      font-size: 14px;
+      color: white;
+    }
+  }
+
+  :global {
+    .ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper:hover::before,
+    .ant-tree.ant-tree-directory.ant-tree-child-tree
+      > li
+      span.ant-tree-node-content-wrapper:hover::before,
+    .ant-tree.ant-tree-directory
+      > li.ant-tree-treenode-selected
+      > span.ant-tree-node-content-wrapper::before,
+    .ant-tree.ant-tree-directory
+      .ant-tree-child-tree
+      > li.ant-tree-treenode-selected
+      > span.ant-tree-node-content-wrapper::before {
+      background: #22c2fe;
+    }
+  }
+}
+
+:global {
+  .ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper::before {
+    height: 45px;
+  }
+
+  .ant-tree.ant-tree-directory
+    .ant-tree-child-tree
+    > li
+    span.ant-tree-node-content-wrapper::before {
+    height: 45px;
+  }
+}
+
+:global(.ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper):hover::before {
+  background: #22c2fe;
+}
+
+:global(.ant-tree.ant-tree-directory
+    .ant-tree-child-tree
+    > li
+    span.ant-tree-node-content-wrapper):hover::before {
+  background: #22c2fe;
+}

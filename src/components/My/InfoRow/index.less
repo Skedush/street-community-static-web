@@ -1,0 +1,104 @@
+.tableList {
+  .tableListOperator {
+    margin-bottom: 16px;
+    button {
+      margin-right: 8px;
+    }
+  }
+}
+.formBox {
+  width: 98%;
+  margin: 0;
+  height: 600px;
+}
+
+.sectionBox {
+  margin: 20px 10px;
+  .DetailDiv {
+    .detail {
+      div {
+        padding-left: 15px;
+        border-left: 1px solid rgba(53, 66, 75, 1);
+        border-top: 1px solid rgba(53, 66, 75, 1);
+      }
+    }
+    :nth-of-type(2n) {
+      :nth-of-type(2n) {
+        border-right: 1px solid rgba(53, 66, 75, 1);
+      }
+    }
+  }
+  :nth-of-type(2n) {
+    .detail {
+      div {
+        background: rgba(67, 82, 93, 0.1);
+      }
+    }
+  }
+  :last-child {
+    .detail {
+      div {
+        border-bottom: 1px solid rgba(53, 66, 75, 1);
+      }
+    }
+  }
+}
+.DetailDiv {
+  .detail {
+    margin-top: 0;
+    color: #fff;
+    padding: 0 !important;
+    div {
+      color: #fff;
+      height: 36px;
+      line-height: 36px;
+    }
+    input {
+      border: none;
+      background: none;
+      width: 100%;
+    }
+  }
+  .detectDate {
+    color: #fff;
+    font-size: 14px;
+  }
+  .detailInput {
+    padding: 0 !important;
+  }
+}
+
+.listQueryForm {
+  :global {
+    .ant-form-item {
+      margin-bottom: 24px;
+      margin-right: 0;
+      display: flex;
+      > .ant-form-item-label {
+        width: auto;
+        line-height: 32px;
+        padding-right: 8px;
+      }
+      .ant-form-col {
+        width: auto;
+        line-height: 32px;
+        padding-right: 8px;
+      }
+      .ant-form-item-control {
+        line-height: 32px;
+      }
+    }
+    .ant-form-item-control-wrapper {
+      flex: 1;
+    }
+  }
+  .submitButtons {
+    display: block;
+    white-space: nowrap;
+    margin-bottom: 24px;
+  }
+}
+
+.modYify {
+  color: #000;
+}

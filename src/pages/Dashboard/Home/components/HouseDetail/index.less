@@ -1,0 +1,340 @@
+@import '../../../../../global.less';
+// float: right;
+//     margin-right: 8px;
+//     height: 100%;
+//     line-height: 32px;
+.container {
+  width: 100%;
+  height: 623px;
+
+  .workButton {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 85px;
+    height: 32px;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 24px;
+    background: rgba(42, 132, 255, 0.5);
+    // opacity: 0.5;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 16px 0 0 16px;
+    border-right: 2px solid rgba(233, 233, 233, 0.1);
+    z-index: 1000;
+    border: 0;
+    .yuanShow {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: #f15362;
+      top: 4px;
+      right: 20px;
+      border-radius: 50%;
+    }
+    span {
+      height: 100%;
+      line-height: 32px;
+    }
+    i {
+      height: 100%;
+      line-height: 32px;
+    }
+  }
+  .workButton:hover {
+    background-color: #2983ff;
+  }
+  :global {
+    .ant-empty-normal {
+      margin: 66px 0;
+      color: rgba(0, 0, 0, 0.25);
+    }
+  }
+  .tableImage {
+    width: 60px;
+    height: 60px;
+  }
+  .leftInfo {
+    width: 247px;
+    box-sizing: border-box;
+    padding-top: 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rightInfo {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    .headLabel {
+      width: 100%;
+      .tagLabel {
+        height: 55px;
+        overflow-y: scroll;
+        i {
+          color: #fff;
+        }
+      }
+      div {
+        margin-top: 10px;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        span {
+          padding: 0 5px;
+          min-width: 90px;
+          height: 30px;
+          border-radius: 15px;
+          background: #4e36ff;
+          display: flex;
+          // justify-content: center;
+          justify-content: space-around;
+          align-items: center;
+          font-size: 14px;
+          color: #fff;
+          margin: 7px;
+          border: 1px solid transparent;
+        }
+      }
+    }
+    :global {
+      .ant-table-content {
+        height: 100%;
+      }
+      .ant-table-tbody > tr > td {
+        border: none;
+      }
+      .ant-table-wrapper {
+        border: 1px solid #344451 !important;
+      }
+      .ant-table-thead tr th {
+        border-bottom: 1px solid #344451;
+      }
+      .ant-table-tbody > tr:hover {
+        background: rgba(34, 194, 254, 0.1) !important;
+      }
+    }
+  }
+  .flex1 {
+    flex: 1;
+  }
+
+  .font12 {
+    font-size: 12px;
+  }
+  .leftDetail {
+    font-size: 12px;
+    height: 260px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10%;
+    display: flex;
+    .DetailLeft {
+      display: flex;
+      width: 45%;
+      flex-direction: column;
+      p {
+        display: flex;
+        justify-content: flex-end;
+        padding: 4px 0 4px 4px;
+        margin: 0;
+        height: 28px;
+        overflow: hidden;
+      }
+    }
+    .DetailRight {
+      display: flex;
+      width: 55%;
+      flex-direction: column;
+      p {
+        // display: flex;
+        height: 28px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 4px 4px 4px 0;
+        margin: 0;
+      }
+    }
+    div {
+      color: #fff;
+    }
+  }
+  .colorWhite {
+    color: white;
+  }
+  .ownName {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #fff;
+  }
+  .charts {
+    height: 200px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 5px;
+    .chartItem {
+      width: 100%;
+      flex: auto;
+      display: flex;
+      overflow: hidden;
+    }
+  }
+  .chart {
+    padding: 32px;
+    color: white;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    // background-color: red;
+  }
+}
+.chartItem {
+  width: 100%;
+  height: 100%;
+}
+// 人物画像
+.modalPortrait {
+  display: flex;
+  overflow: hidden;
+  z-index: 9999;
+  :global {
+    .ant-modal-title {
+      color: #fff;
+      font-size: 16px;
+      line-height: 46px;
+    }
+    .ant-modal {
+      height: 825px !important;
+      width: 1250px !important;
+      position: relative;
+      padding-bottom: 0;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+    .ant-modal-close {
+      color: #fff;
+      right: 25px;
+      top: 17px;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-content {
+      position: static;
+      background: rgba(19, 34, 45, 1);
+      height: 100%;
+      .noBorderRadius;
+      border: 1px solid @borderThemeColor;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-modal-header {
+      background: rgba(19, 34, 45, 1);
+      .noBorderRadius;
+      padding: 0 25px 0 30px;
+      border-bottom: 1px solid @borderThemeColor;
+      height: 46px;
+    }
+    .ant-modal-body {
+      background: rgba(19, 34, 45, 1);
+      .noBorderRadius;
+      padding: 0;
+      flex: 1;
+      // position: relative;
+      height: 91%;
+    }
+    .ant-modal-close-x {
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+    }
+  }
+}
+.selectTag {
+  min-width: 248px;
+  margin-left: 20px;
+  max-width: 330px;
+  // display: flex;
+  // flex-flow: 1;
+  //  overflow: hidden;
+  :global {
+    .ant-select-selection--multiple .ant-select-selection__choice {
+      background: #22c2fe;
+      border: 0;
+      color: #fff;
+    }
+
+    .ant-select-selection {
+      // border-radius: 0;
+      height: 32px;
+    }
+    .ant-select-selection__rendered {
+      height: 100%;
+      ul {
+        display: flex;
+      }
+    }
+  }
+}
+.mainTitle {
+  color: #fff;
+}
+// 标签
+.houseTitle {
+  display: flex;
+  height: 100%;
+  line-height: 30px;
+  color: #fff;
+}
+.tag1 {
+  background: #fe4e4e !important;
+}
+
+.tag2 {
+  background: #fe804e !important;
+}
+
+.tag3 {
+  background: #be4efe !important;
+}
+
+.tag4 {
+  background: #4ecefe !important;
+}
+
+.tag5 {
+  background: #4e36ff !important;
+}
+
+.tagPerson {
+  background: #4e36ff !important;
+}
+:global {
+  .ant-select-dropdown--multiple {
+    background-color: #2c3944;
+  }
+  .ant-select-dropdown-menu-item {
+    color: #bfbfbf;
+    // background: #666;
+  }
+}
+
+.selectDownTag {
+  background: #2c3944;
+}

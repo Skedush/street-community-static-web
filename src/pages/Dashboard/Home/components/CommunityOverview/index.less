@@ -1,0 +1,159 @@
+.modal {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 1150px;
+  height: 670px;
+  background: rgba(19, 34, 45, 0.9);
+  color: white;
+  z-index: 1000;
+  .header {
+    padding: 15px 30px;
+    .close {
+      cursor: pointer;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: row;
+    padding: 25px 30px;
+
+    .infoLeft {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .image {
+        width: 264px;
+        height: 157px;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        font-size: 14px;
+        color: #dadada;
+        width: 100%;
+        height: 26px;
+        min-height: 26px;
+        box-sizing: border-box;
+        background: url('../../../../../assets/images/divbg.png') no-repeat center;
+        background-size: 100% 100%;
+        margin-top: 19px;
+
+        .icon {
+          min-width: 40px;
+          height: 100%;
+          text-align: center;
+          background: rgba(255, 255, 255, 0.1);
+          margin-right: 15px;
+        }
+
+        .title {
+          width: 80%;
+          text-align: left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          justify-content: space-between;
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .infoRight {
+      display: flex;
+      flex: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0 40px;
+
+      .itemr {
+        display: flex;
+        width: 50%;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 10px;
+        height: 84px;
+
+        .image {
+          width: 52px;
+          height: 54px;
+          background: url('@/assets/images/common/icon-circle-bg.png') no-repeat center;
+          background-size: 100% 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .content {
+          flex: 1 1;
+          margin-left: 10px;
+          flex-direction: column;
+          justify-content: center;
+
+          span {
+            font-size: 28px;
+            color: #fff;
+          }
+
+          .contentBottom {
+            display: flex;
+            flex-direction: row;
+
+            span {
+              font-size: 12px;
+              margin-left: 10px;
+            }
+
+            span:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+      .itemr:nth-last-of-type(1),
+      .itemr:nth-last-of-type(2) {
+        border: none;
+      }
+    }
+  }
+
+  .chart {
+    padding: 32px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    .chartItem {
+      height: 100%;
+    }
+  }
+}

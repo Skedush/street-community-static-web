@@ -1,0 +1,51 @@
+@import '../../../global.less';
+.modal {
+  :global {
+    .ant-modal-title {
+      color: #fff;
+      font-size: 16px;
+      line-height: 46px;
+    }
+
+    .ant-modal-close {
+      color: #fff;
+      right: 25px;
+      top: 17px;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-close-x {
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+    }
+
+    .ant-modal-header {
+      background: @bgModalColor;
+      .noBorderRadius;
+      padding: 0 25px 0 30px;
+      border-bottom: 1px solid @borderThemeColor;
+      height: 46px;
+      // height: 6%;
+    }
+    .ant-modal-body {
+      padding: 24px 24px 24px 24px;
+    }
+  }
+
+  .image {
+    height: 220px;
+    width: 350px;
+  }
+  .content {
+    margin-top: 20px;
+    color: #fff;
+  }
+  .btnGrounp {
+    padding-top: 10px;
+    border-top: 1px solid @borderThemeColor;
+  }
+}

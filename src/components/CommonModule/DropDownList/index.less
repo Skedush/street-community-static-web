@@ -1,0 +1,88 @@
+html {
+  --antd-wave-shadow-color: none !important;
+}
+
+.buttonBox {
+  height: 36px;
+  width: 140px;
+  border-radius: 4px;
+  right: 345px;
+  top: 22px;
+  position: absolute;
+  background: rgba(19, 34, 45, 0.78);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px 0;
+  z-index: 9990;
+
+  :global(.ant-btn) {
+    background: none;
+    height: 100%;
+    color: #fff;
+    border: none;
+    width: 100%;
+    border-radius: 0;
+    font-size: 14px;
+  }
+
+  :global(.ant-btn):nth-of-type(2) {
+    border-left: 1px solid #fff;
+  }
+
+  :global(.ant-dropdown-open) {
+    color: #fff;
+    border: none;
+  }
+}
+
+.propsClass {
+  position: fixed;
+  top: 88px;
+  left: 16.6%;
+}
+
+:global(.ant-dropdown) {
+  // width: 140px;
+  width: 50px;
+  left: 499px;
+}
+:global(.ant-dropdown-menu) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgba(19, 34, 45, 0.78);
+  padding-top: 8px;
+  margin-top: 2px;
+  // width: 140px;
+}
+.overlayMenu {
+  left: 1435px !important;
+}
+
+.checkBox {
+  left: 0;
+  padding-left: 25px;
+  font-size: 12px;
+  :global(.ant-radio-wrapper) {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  :global(.ant-radio-inner) {
+    border-radius: 2px;
+    background: none;
+    border-color: #8ba4b7;
+  }
+  :global(.ant-radio-inner::after) {
+    border-radius: 2px;
+  }
+  :global(.ant-radio-checked::after) {
+    border: none;
+  }
+  :global(.ant-dropdown-placement-bottomRight) {
+    left: 505px !important;
+  }
+}

@@ -1,0 +1,171 @@
+@import '../../../../global.less';
+// 搜索框
+.actionBar {
+  .selectTag {
+    min-width: 248px;
+    max-width: 330px;
+    // display: flex;
+    // flex-flow: 1;
+    //  overflow: hidden;
+    :global {
+      .ant-select-selection--multiple .ant-select-selection__choice {
+        background: #22c2fe;
+        border: 0;
+        color: #fff;
+      }
+
+      .ant-select-selection {
+        // border-radius: 0;
+        height: 32px;
+      }
+      .ant-select-selection__rendered {
+        height: 100%;
+        ul {
+          display: flex;
+        }
+      }
+    }
+  }
+  :global {
+    .ant-cascader-picker {
+      background-color: #2c3944;
+      color: #fff;
+    }
+    .ant-form-item-control {
+      position: relative;
+      line-height: 0;
+      zoom: 1;
+    }
+    .ant-col-md-20 {
+      width: 100%;
+    }
+    .ant-form-inline .ant-form-item {
+      margin-top: 10px;
+    }
+    .ant-form-inline .ant-form-item > .ant-form-item-control-wrapper,
+    .ant-form-inline .ant-form-item > .ant-form-item-label {
+      width: 100% !important;
+    }
+  }
+}
+
+.select {
+  background: @bgThemeColor;
+  border-color: @borderThemeColor;
+}
+
+// 签收确认框
+.signFo {
+  top: 30%;
+  :global {
+    .ant-modal-confirm-content {
+      color: #999;
+    }
+    .ant-modal-confirm-body > .anticon + .ant-modal-confirm-title + .ant-modal-confirm-content {
+      margin-left: 38px;
+    }
+    .ant-col {
+      // width: 100%;
+    }
+    // .ant-form-inline .ant-form-item > .ant-form-item-control-wrapper,
+    // .ant-form-inline .ant-form-item > .ant-form-item-label {
+    //   width: 100%;
+    // }
+  }
+}
+
+.timePop {
+  :global {
+    .ant-calendar-date {
+      color: #ccc;
+    }
+  }
+}
+.spinstyle {
+  height: 100%;
+  overflow: auto;
+  :global(.ant-spin-container) {
+    height: 100%;
+  }
+}
+
+.tableButton {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  :global {
+    .ant-btn-link[disabled],
+    .ant-btn-link[disabled]:hover {
+      span {
+        color: #22799c !important;
+      }
+    }
+  }
+}
+
+.equipmentModal {
+  display: flex;
+  overflow: hidden;
+  :global {
+    .ant-modal-title {
+      color: #fff;
+      font-size: 16px;
+      line-height: 44px;
+    }
+    .ant-modal {
+      height: 718px !important;
+      width: 1238px !important;
+      position: relative;
+      padding-bottom: 0;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+    }
+    .ant-modal-close {
+      color: #fff;
+      right: 25px;
+      // top: 17px;
+      // line-height: 18px;
+      top: 3px;
+      font-size: 16px;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-content {
+      position: relative;
+      background: @bgThemeColor;
+      height: 100%;
+      .noBorderRadius;
+      border: 1px solid @borderThemeColor;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-modal-header {
+      background: rgba(19, 34, 45, 0.95);
+      .noBorderRadius;
+      padding: 0 25px 0 30px;
+      border-bottom: 1px solid @borderThemeColor;
+      // height: 44px;
+      height: 6%;
+      font-size: 16px;
+    }
+    .ant-modal-body {
+      background: rgba(19, 34, 45, 0.95);
+      .noBorderRadius;
+      padding: 0;
+      flex: 1;
+      position: relative;
+      height: 94%;
+    }
+    .ant-modal-close-x {
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+      line-height: 44px;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import '../../../../global.less';
+:global {
+  // .has-error .ant-input-affix-wrapper .ant-input,
+  .has-error .ant-input-affix-wrapper .ant-input,
+  .has-error .ant-input,
+  .has-error .ant-input:hover {
+    background-color: #394855;
+    border-color: #f5222d;
+  }
+}
+
+.myPageHeader {
+  :global {
+    .ant-divider {
+      height: 20px;
+      background: #ccc;
+    }
+    .ant-page-header-title-view-title {
+      color: @titleColor;
+    }
+    .ant-page-header {
+      background: @bgThemeHeightColor;
+    }
+    .has-error .ant-input,
+    .has-error .ant-input:hover {
+      background-color: #fff;
+      // border-color: #f5222d;
+    }
+  }
+}
+.blueTip {
+  border-left: 2px solid rgb(34, 194, 254);
+}
+.preCenter {
+  height: 3em;
+  line-height: 3em;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.textArea {
+  resize: none;
+}
+.colRender {
+  display: flex;
+  flex-direction: column;
+  :global {
+    .ant-select-selection {
+      background: #394855;
+    }
+  }
+}
+.menuTree {
+  :global {
+    .ant-tree {
+      color: @inputFontColor;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper {
+      color: @inputFontColor;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper:hover {
+      background-color: @bgThemeColor;
+    }
+    li.ant-tree-treenode-disabled > .ant-tree-node-content-wrapper span {
+      color: #fff;
+    }
+  }
+}
+.bottomBtn {
+  // height: 60px;
+  height: 10%;
+}
+
+.row {
+  height: 10%;
+}
+.form {
+  height: 90%;
+}

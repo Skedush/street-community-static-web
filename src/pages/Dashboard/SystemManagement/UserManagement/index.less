@@ -1,0 +1,79 @@
+@import '../../../../global.less';
+.actionBar {
+  .card {
+    :global {
+      .ant-card-body {
+        padding: 0 24px;
+      }
+    }
+  }
+}
+
+.modal {
+  :global {
+    .ant-modal-title {
+      color: @inputFontColor;
+    }
+    .ant-modal-close {
+      color: #ccc;
+      // opacity: ;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-content {
+      background: @bgThemeColor;
+      .noBorderRadius;
+      border: 1px solid @borderThemeColor;
+    }
+    .ant-modal-header {
+      background: @bgThemeColor;
+      .noBorderRadius;
+      border-bottom: 1px solid @borderThemeColor;
+    }
+    .ant-modal-body {
+      background: @bgThemeColor;
+      .noBorderRadius;
+    }
+    .ant-input {
+      .noBorderRadius;
+      .bgThemeHeightColor;
+      .borderThemeColor;
+      .inputFontColor;
+      background-color: #2c3944 !important;
+    }
+  }
+}
+.overlay {
+  // left: 400px !important;
+  left: 1800px !important;
+  width: 200px !important;
+  // top:401px !important;
+}
+
+.modalHeight {
+  height: 200px;
+}
+
+.confirtBox {
+  :global {
+    .ant-modal-confirm-content {
+      color: #fff;
+    }
+  }
+}
+:global {
+  .ant-dropdown-menu-item-disabled,
+  .ant-dropdown-menu-submenu-title-disabled {
+    opacity: 0.5;
+  }
+  .ant-dropdown-menu-item-disabled:hover,
+  .ant-dropdown-menu-submenu-title-disabled:hover {
+    // opacity: 0.5;
+    background: transparent;
+  }
+  .ant-btn-link[disabled] {
+    opacity: 0.5;
+  }
+}

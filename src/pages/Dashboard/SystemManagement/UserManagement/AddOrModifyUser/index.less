@@ -1,0 +1,80 @@
+@import '../../../../../global.less';
+:global {
+  .has-error .ant-input-affix-wrapper .ant-input,
+  .has-error .ant-input-affix-wrapper .ant-input:hover {
+    background-color: #394855;
+    border-color: #f5222d;
+  }
+  .ant-cascader-menus {
+    background-color: #394855;
+  }
+
+  .ant-cascader-menu {
+    background-color: #394855;
+    // border-right: 1px solid #666;
+    // border-left: 1px solid #666;
+    border: 0;
+    color: #fff;
+    height: auto;
+    max-height: 175px;
+  }
+
+  .ant-cascader-picker {
+    background-color: #394855;
+    color: #fff;
+  }
+
+  .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled),
+  .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover,
+  .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):active {
+    background-color: #394855;
+    opacity: 0.4;
+  }
+  .ant-cascader-menu-item:hover {
+    background-color: #394855;
+  }
+  .ant-cascader-picker-arrow {
+    color: #fff;
+  }
+}
+.myPageHeader {
+  :global {
+    .ant-divider {
+      height: 20px;
+      background: #ccc;
+    }
+    .ant-page-header-title-view-title {
+      color: @titleColor;
+    }
+    .ant-page-header {
+      background: @bgThemeHeightColor;
+    }
+  }
+}
+.blueTip {
+  border-left: 2px solid rgb(34, 194, 254);
+}
+.preCenter {
+  height: 3em;
+  line-height: 3em;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.textArea {
+  resize: none;
+}
+.bottomBtn {
+  height: 60px;
+}
+.selectDropdown {
+  background: @bgThemeColor;
+  border-color: @borderThemeColor;
+  .noBorderRadius;
+}
+.form {
+  :global {
+    .ant-calendar-picker {
+      width: 100%;
+    }
+  }
+}

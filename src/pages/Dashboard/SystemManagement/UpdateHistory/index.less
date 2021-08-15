@@ -1,0 +1,89 @@
+@import '../../../../global.less';
+
+.myPageHeader {
+  :global {
+    .ant-divider {
+      height: 20px;
+      background: #ccc;
+    }
+    .ant-page-header-title-view-title {
+      color: @titleColor;
+    }
+    .ant-page-header {
+      background: @bgThemeHeightColor;
+    }
+  }
+}
+.form {
+  overflow: hidden;
+  :global {
+    .ant-form {
+      display: flex;
+      overflow: hidden;
+      flex: auto;
+      flex-direction: column;
+      .ant-row {
+        overflow: hidden;
+        flex: auto;
+        display: flex;
+        flex-direction: column;
+        .ant-row {
+          overflow: hidden;
+          flex: auto;
+          &:last-child {
+            flex: unset;
+          }
+          .ant-form-item {
+            display: block;
+          }
+          .ant-col-24 {
+            flex: auto;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            .ant-form-item {
+              flex: auto;
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              .ant-form-item-control-wrapper {
+                flex: auto;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                .ant-form-item-control {
+                  flex: auto;
+                  overflow: hidden;
+                  display: flex;
+                  flex-direction: column;
+                  .ant-form-item-children {
+                    overflow: hidden;
+                    flex: auto;
+                    display: flex;
+                    flex-direction: column;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .ant-input {
+        background-color: #394855;
+      }
+    }
+  }
+}
+
+.editor {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid @borderThemeColor;
+  :global {
+    [data-emoji='🖕'] {
+      display: none;
+    }
+  }
+}

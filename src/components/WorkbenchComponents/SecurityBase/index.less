@@ -1,0 +1,122 @@
+.securityBottom {
+  display: flex;
+  width: 100%;
+  height: 35%;
+  padding-bottom: 10px;
+  // height: 100%;
+  // flex: auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  // padding: 30px 0;
+  background: #313f4b;
+  .header {
+    width: 100%;
+    .updateTime {
+      color: #fff;
+      width: 100%;
+      padding: 10px 20px 0 0;
+    }
+  }
+
+  .piebox {
+    width: 50%;
+    height: 42%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    //  align-items: center;
+    flex-wrap: wrap;
+    .chartBox {
+      width: 40%;
+      // height: 120px;
+      height: 100%;
+      position: relative;
+      .icon {
+        background-image: -webkit-linear-gradient(left, #22fcf1, #22c2fe);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: absolute;
+        height: 32px;
+        // line-height: 32px;
+        width: 32px;
+        top: 50%;
+        left: 50%;
+
+        // z-index: 10000;
+        margin-top: -16px;
+        margin-left: -16px;
+        :global(.iconfont) {
+          font-size: 32px;
+          line-height: 32px;
+        }
+      }
+    }
+    .text {
+      flex: 1;
+      // width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      .textBox,
+      p {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        padding: 0 5%;
+        span {
+          display: flex;
+          align-items: center;
+          line-height: 14px;
+          color: #999;
+          font-size: 14px;
+          i {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22fcf1;
+            display: block;
+            margin-right: 8px;
+          }
+        }
+
+        span:nth-of-type(2) {
+          color: #fff;
+        }
+      }
+      p:nth-of-type(1) {
+        background: rgba(34, 194, 254, 0.1);
+        height: 25%;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          color: #fff;
+        }
+        span:nth-of-type(2) {
+          font-weight: 500;
+        }
+      }
+      p:nth-of-type(3) {
+        span {
+          i {
+            background: #22c2fe;
+          }
+        }
+      }
+      p:nth-of-type(4) {
+        span {
+          i {
+            background: #7688a7;
+            // background: #22c2fe;
+          }
+        }
+      }
+    }
+  }
+}

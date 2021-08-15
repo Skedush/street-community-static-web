@@ -1,0 +1,227 @@
+@import '../../../../../global.less';
+.toolTip {
+  z-index: 9999;
+}
+.container {
+  width: 54%;
+  height: 85%;
+  position: absolute;
+  border-radius: 4px;
+  bottom: 30px;
+  background: rgba(11, 25, 52, 0.9);
+  overflow: hidden;
+  z-index: 6;
+  left: 17%;
+
+  .top {
+    color: #fff;
+    border-bottom: 1px solid #666;
+    .title {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+    .close {
+      cursor: pointer;
+      padding: 10px 20px;
+      &:hover {
+        color: #22c2fe;
+        background: rgba(52, 66, 90, 0.8);
+      }
+    }
+  }
+  :global {
+    .ant-spin-nested-loading {
+      flex: 1;
+      overflow: hidden;
+    }
+    .ant-spin-container {
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+    }
+  }
+  .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    .porLeft {
+      width: 33%;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 0 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 2px;
+      .leftTop {
+        width: 100%;
+        padding: 20px 0;
+        .photo {
+          height: 150px;
+          width: 150px;
+        }
+        .name {
+          font-size: 24px;
+          color: #fff;
+        }
+      }
+      .infoData {
+        width: 100%;
+        font-size: 12px;
+        box-sizing: border-box;
+        color: #fff;
+
+        .info {
+          padding: 10px 0;
+          .item {
+            padding: 3px 0;
+            width: 50%;
+          }
+          .address {
+            padding: 3px 0;
+          }
+        }
+
+        .hoverTitle {
+          background: #4ecefe;
+          margin-left: 4px;
+          width: 16px;
+          height: 16px;
+          text-align: center;
+          line-height: 16px;
+          border-radius: 50%;
+          display: inline-block;
+          color: #fff;
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+
+      .houseData {
+        width: 100%;
+        box-sizing: border-box;
+        color: #fff;
+        height: 25%;
+        overflow: hidden;
+      }
+
+      .carData {
+        width: 100%;
+        box-sizing: border-box;
+        height: 25%;
+        color: #fff;
+      }
+
+      .carousel {
+        position: relative;
+
+        .left,
+        .right {
+          z-index: 10;
+          cursor: pointer;
+          position: absolute;
+          color: #1d9dce;
+          top: 50%;
+          font-size: 20px;
+        }
+        .right {
+          right: 0;
+        }
+        .text {
+          border-radius: 4px;
+          cursor: pointer;
+          &:hover {
+            background: rgba(30, 152, 199, 0.1);
+          }
+          color: #fff;
+          font-size: 14px;
+          margin: 15px 20px 0 20px;
+          div {
+            padding: 5px 0;
+          }
+        }
+      }
+
+      .title {
+        padding-bottom: 5px;
+        border-bottom: 1px solid #125d7a;
+        .icon {
+          font-size: 18px;
+          color: aquamarine;
+          margin-right: 5px;
+        }
+        .text {
+          margin-left: 5px;
+          font-size: 16px;
+        }
+      }
+    }
+    .renderTable {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      h3 {
+        color: #fff;
+        font-size: 16px;
+        line-height: 14px;
+        margin-bottom: 8px;
+      }
+      .rightTable {
+        flex: 1;
+        overflow: hidden;
+        :global {
+          .ant-table-content {
+            height: 100%;
+          }
+          .ant-table-thead tr th {
+            div {
+              color: #bbb;
+            }
+          }
+
+          .ant-table-tbody > tr > td {
+            background: rgba(30, 152, 199, 0.1);
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.information {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-size: 14px;
+    color: #999;
+  }
+}
+
+:global(.ant-empty-description) {
+  font-size: 14px;
+  color: #fff;
+}
+:global {
+  .ant-table-tbody > tr:hover {
+    background: rgba(39, 73, 87, 1) !important;
+  }
+  .ant-select-dropdown {
+    z-index: 30000;
+  }
+}
+:global(.ant-table-wrapper) {
+  border: none !important;
+}
+
+// 车辆画像
+:global(.ant-table-tbody > tr > td) {
+  padding: 16px 16px;
+}

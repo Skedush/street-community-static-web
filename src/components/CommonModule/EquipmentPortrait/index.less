@@ -1,0 +1,301 @@
+@import '../../../global.less';
+
+.porBox {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  .porLeft {
+    width: 280px;
+    border-right: 1px solid rgba(53, 66, 75, 1);
+
+    .topImg {
+      width: 100%;
+
+      img {
+        margin-top: 40px;
+        margin-left: 40px;
+        height: 150px;
+        width: 150px;
+      }
+      .divWord {
+        width: 123px;
+        height: 41px;
+        margin-left: 55px;
+        text-align: center;
+        margin-top: 36px;
+        .equipmentType {
+          color: #fff;
+          font-size: 16px;
+          margin-top: 0 !important;
+          margin-bottom: 0 !important;
+        }
+        .equipmentCode {
+          color: #999;
+          font-size: 14px;
+          overflow: hidden; //超出的文本隐藏
+          text-overflow: ellipsis; //溢出用省略号显示
+          white-space: nowrap;
+        }
+      }
+    }
+    .icon {
+      width: 186px;
+      height: 1px;
+      background: rgba(209, 209, 209, 1);
+      opacity: 0.2;
+      margin-left: 25px;
+      margin-top: 25px;
+    }
+    .divText {
+      margin-top: 18px;
+      padding-left: 25px;
+      padding-right: 20px;
+      p {
+        color: #999;
+        font-size: 12px;
+        .hasAddress {
+          color: rgba(22, 208, 255, 1);
+          cursor: pointer;
+        }
+        .editBtn {
+          &:focus {
+            background-color: inherit;
+          }
+        }
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .porRight {
+    width: 100%;
+    overflow: hidden;
+    // background: red;
+    .enterType {
+      position: relative;
+    }
+    .enterType::after {
+      content: '';
+      position: absolute;
+      height: 5px;
+      top: 10px;
+      left: 60px;
+      width: 5px;
+      background: green;
+      border-radius: 50%;
+    }
+    .leaveType {
+      position: relative;
+    }
+    .leaveType::after {
+      content: '';
+      position: absolute;
+      height: 5px;
+      top: 10px;
+      left: 60px;
+      width: 5px;
+      background: rgba(22, 208, 255, 1);
+      border-radius: 50%;
+    }
+    .unknowType {
+      position: relative;
+    }
+    .unknowType::after {
+      content: '';
+      position: absolute;
+      height: 5px;
+      top: 10px;
+      left: 60px;
+      width: 5px;
+      background: rgba(170, 181, 204, 1);
+      border-radius: 50%;
+    }
+    .equipmentInfo {
+      padding-top: 21px;
+      padding-left: 21px;
+      display: flex;
+      flex-wrap: wrap;
+      .title {
+        width: 100px;
+        height: 14px;
+        font-size: 14px;
+
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        line-height: 24px;
+      }
+      .content {
+        margin-top: 17px;
+        .warm {
+          width: 160px;
+          height: 40px;
+          float: left;
+          border: 1px solid rgba(53, 66, 75, 1);
+          color: #999;
+          background-color: #2c3944;
+          line-height: 40px;
+          text-align: center;
+        }
+        .info {
+          width: 160px;
+          height: 40px;
+          float: left;
+          line-height: 40px;
+          text-align: center;
+          // overflow-x: scroll;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          // text-overflow: ellipsis;
+          color: #fff;
+          border: 1px solid rgba(53, 66, 75, 1);
+          span {
+            display: block;
+            width: 205px;
+            height: 40px;
+          }
+        }
+      }
+    }
+    .knowInfo {
+      overflow: hidden;
+      // padding-top: 21px;
+      // padding-left: 21px;
+      padding: 21px;
+      // display: flex;
+      // flex-wrap: wrap;
+      .title {
+        width: 100px;
+        height: 14px;
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        line-height: 24px;
+      }
+      .content {
+        overflow: hidden;
+        width: 98%;
+        margin-top: 20px;
+        .rightTable {
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+.cascader {
+  background: @bgThemeHeightColor;
+  border-color: @borderThemeColor;
+  border-radius: 0;
+  z-index: 9999 !important;
+}
+
+//房屋画像
+.houseModal {
+  :global(.ant-modal-content) {
+    background: rgba(19, 34, 45, 1);
+    position: relative;
+  }
+  :global {
+    .ant-modal-title {
+      color: #fff;
+      font-size: 16px;
+      line-height: 46px;
+    }
+    .ant-modal {
+      // height: 825px !important;
+      // width: 1250px !important;
+      width: 1072px !important;
+      height: 672px !important;
+      position: relative;
+      padding-bottom: 0;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .ant-modal-close {
+      color: #fff;
+      right: 25px;
+      top: 17px;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-content {
+      position: static;
+      background: rgba(19, 34, 45, 1);
+      height: 100%;
+      .noBorderRadius;
+      border: 1px solid @borderThemeColor;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-modal-header {
+      background: rgba(19, 34, 45, 1);
+      .noBorderRadius;
+      padding: 0 25px 0 30px;
+      border-bottom: 1px solid @borderThemeColor;
+      height: 46px;
+    }
+    .ant-modal-body {
+      background: rgba(19, 34, 45, 1);
+      .noBorderRadius;
+      padding: 0;
+      flex: 1;
+      // position: relative;
+      height: 100%;
+    }
+    .ant-modal-close-x {
+      font-size: 14px;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+    }
+  }
+}
+
+.modal {
+  // z-index: 9999;
+  // z-index: 10001;
+  :global {
+    .ant-modal-title {
+      color: @inputFontColor;
+    }
+    .ant-modal {
+      max-height: 80%;
+      overflow: auto;
+    }
+    .ant-modal-close {
+      color: #ccc;
+    }
+    .ant-modal-close:focus,
+    .ant-modal-close:hover {
+      color: #fff;
+    }
+    .ant-modal-content {
+      background: @bgThemeColor;
+      // height: 723px;
+      // overflow: hidden;
+      .noBorderRadius;
+      border: 1px solid @borderThemeColor;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-modal-header {
+      background: @bgThemeHeightColor;
+      .noBorderRadius;
+      border-bottom: 1px solid @borderThemeColor;
+    }
+    .ant-modal-body {
+      height: 100%;
+      flex: 1;
+      background: @bgThemeColor;
+      .noBorderRadius;
+    }
+  }
+}

@@ -1,0 +1,197 @@
+@import '../../../../../global.less';
+.myPageHeader {
+  :global {
+    .ant-divider {
+      height: 20px;
+      background: #ccc;
+    }
+    .ant-page-header-title-view-title {
+      color: @titleColor;
+    }
+    .ant-page-header-heading-title {
+      color: #fff;
+    }
+    .ant-page-header {
+      background: @bgThemeHeightColor;
+    }
+  }
+}
+.addAddress {
+  margin-left: 0;
+  width: 100%;
+  margin-bottom: '10px';
+  background: #2c3944;
+  color: #fff;
+  border-color: #445366;
+}
+.addressText {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.addAddress:hover {
+  color: #22c2fe;
+}
+.textType {
+  font-variant: tabular-nums;
+}
+.blueTip {
+  border-left: 2px solid rgb(34, 194, 254);
+}
+.preCenter {
+  height: 39px;
+  line-height: 39px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.textArea {
+  resize: none;
+}
+
+.bottomBtn {
+  height: 60px;
+  :global {
+    .ant-btn[disabled] {
+      background: rgba(34, 194, 254, 0.5);
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+// .bottomBox {
+//   :global {
+//     .ant-calendar-year-panel-year {
+//       color: #fff;
+//     }
+//   }
+// }
+.selectDropdown {
+  background: @bgThemeColor;
+  border-color: @borderThemeColor;
+  .noBorderRadius;
+}
+
+.form {
+  overflow: auto;
+}
+.form::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #394855;
+}
+
+.formBox {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+}
+
+.itemBox {
+  padding: 0 100px 30px;
+  :global {
+    .ant-form-item-control-wrapper {
+      width: 100%;
+    }
+    .ant-form-item {
+      margin: 0;
+    }
+    .ant-cascader-picker {
+      background: #394855;
+      color: #fff;
+      .ant-cascader-picker-arrow {
+        color: #fff;
+      }
+    }
+    .ant-form-item-control {
+      // span{
+      //   display: inline-block;
+      //   width: 100%;
+      // }
+    }
+  }
+  .uploadBox {
+    display: flex;
+    align-items: center;
+    h3 {
+      font-size: 13px;
+      color: #eee;
+      line-height: 13px;
+      margin-right: 40px;
+    }
+    .imageBox {
+      width: 300px;
+      height: 180px;
+      .image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .mapBox {
+      width: 460px;
+      height: 180px;
+      border: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 24px;
+    }
+    :global {
+      .ant-upload-drag {
+        width: 300px;
+        height: 180px;
+        background: none;
+        color: #fff;
+      }
+      .ant-upload-drag-container {
+        display: flex;
+        height: 100%;
+        align-items: center;
+      }
+      .ant-upload.ant-upload-drag .ant-upload {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .selectBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    :global {
+      .anticon-minus {
+        margin: 0 5px;
+      }
+    }
+  }
+}
+:global {
+  .ant-calendar-year-panel {
+    background-color: #394855;
+  }
+  .ant-calendar-year-panel-header .ant-calendar-year-panel-century-select,
+  .ant-calendar-year-panel-header .ant-calendar-year-panel-decade-select,
+  .ant-calendar-year-panel-header .ant-calendar-year-panel-year-select,
+  .ant-calendar-year-panel-header .ant-calendar-year-panel-month-select {
+    color: #fff;
+  }
+
+  // .ant-calendar-year-panel-next-decade-cell {
+  //   cursor: no-drop;
+  //   .ant-calendar-year-panel-year {
+  //     cursor: no-drop;
+  //   }
+  // }
+
+  // .ant-calendar-year-panel-last-decade-cell {
+  //   cursor: no-drop;
+  //   .ant-calendar-year-panel-year {
+  //     cursor: no-drop;
+  //   }
+  // }
+
+  .ant-calendar-year-panel-year {
+    color: #fff;
+  }
+}
